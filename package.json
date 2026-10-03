@@ -1,0 +1,30 @@
+{
+  "name": "robot-simulation-incident-room",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"python3 -m backend.server\" \"vite --host 127.0.0.1\"",
+    "build": "tsc -b && vite build",
+    "start": "python3 -m backend.server",
+    "test": "python3 -m unittest discover -s tests -v",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@assistant-ui/react": "^0.15.23",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.9.9",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}
