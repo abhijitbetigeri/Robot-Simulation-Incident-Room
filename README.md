@@ -2,6 +2,8 @@
 
 A shared workspace where robotics engineers investigate simulation failures and validate fixes together.
 
+**[Live demo](https://robot-simulation-incident-room-ab.style.dev)** · **[Watch the fix-approval recording](submission/demo.mp4)** · [Demo notes](submission/DEMO.md)
+
 The first product slice covers one concrete loop: invite a teammate, inspect the same telemetry step, pin evidence, discuss the diagnosis, propose a configuration change, obtain another participant's approval, then compare baseline and fixed runs.
 
 ## Start
