@@ -4,7 +4,7 @@
 
 Live app: https://robot-simulation-incident-room-ab.style.dev
 
-This 60-second captioned screen recording shows the deployed application's real workflow:
+This 60-second screen recording includes captions and a synthesized Samantha voiceover. It shows the deployed application's real workflow:
 
 1. Create an investigation room and inspect historical robot telemetry.
 2. Pin evidence to a simulation step.
@@ -38,3 +38,11 @@ ffmpeg -y -i .data/demo-recordings/approval-demo.webm \
   -t 60 -r 30 -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p \
   -movflags +faststart -an submission/demo.mp4
 ```
+
+On macOS, add the synchronized voiceover using the built-in `say` command and FFmpeg (or the `imageio-ffmpeg` Python package):
+
+```sh
+python3 scripts/add-demo-voice.py
+```
+
+The editable narration and segment timings are in [narration.json](narration.json).

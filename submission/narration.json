@@ -1,0 +1,11 @@
+[
+  {"start": 0, "text": "Robot Incident Room helps engineers investigate robot failures and review fixes together."},
+  {"start": 5, "text": "We start with a recorded robot run. A shared timeline helps the team inspect the same moment."},
+  {"start": 13, "text": "The engineer pins an observation to the telemetry."},
+  {"start": 18, "text": "A recorded AI diagnosis suggests restoring boot traction."},
+  {"start": 24, "text": "Alex proposes the change. Notice that Alex cannot approve their own fix."},
+  {"start": 31, "text": "We switch to Morgan, a separate reviewer identity. Morgan checks the evidence and adds a review comment."},
+  {"start": 38, "text": "Morgan approves. The decision is recorded with their name."},
+  {"start": 44, "text": "Back as Alex, we compare the historical result. This is a recorded single-seed comparison, not a fresh simulation."},
+  {"start": 53, "text": "The activity trail preserves each decision. Inspect together, review independently, and keep the evidence."}
+]
