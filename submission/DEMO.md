@@ -17,7 +17,7 @@ This 60-second screen recording includes captions and a synthesized Samantha voi
 
 ## Accurate presentation
 
-The recording is automated and operates both named demo identities. It demonstrates two distinct application participants, not footage of two human teammates. It contains only sample telemetry and purpose-created demo comments.
+The recording is automated and operates the placeholder identities `xvz` and `abc (reviewer)`. It demonstrates two distinct application participants, not footage of two human teammates. It contains only sample telemetry and purpose-created demo comments.
 
 The cloud demo loads a historical AI diagnosis and single-seed simulation result. No new model inference or simulation occurs in this recording. The optional local live worker was separately tested across three seeds; see [verification](../docs/VERIFICATION.md).
 

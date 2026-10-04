@@ -32,7 +32,7 @@ try {
   await page.goto(url);
   await caption('Robot Incident Room · A shared workspace for investigating robot failures');
   await pause(3500);
-  await page.getByLabel('Your name').fill('Alex · Engineer');
+  await page.getByLabel('Your name').fill('xvz');
   await page.getByRole('button', { name: 'Create incident room' }).click();
   await expect(page.getByRole('heading', { name: 'Lost traction on the ascent' })).toBeVisible();
   const roomUrl = page.url();
@@ -65,23 +65,23 @@ try {
   await page.evaluate(id => sessionStorage.removeItem('room-token:' + id), roomId);
   await page.goto(roomUrl);
   await caption('5 / Reviewer role · The recording now switches to a separate participant identity');
-  await page.getByLabel('Your name').fill('Morgan · Reviewer');
+  await page.getByLabel('Your name').fill('abc (reviewer)');
   await pause(2500);
   await page.getByRole('button', { name: 'Join room' }).click();
   await expect(page.getByRole('button', { name: 'Approve fix' })).toBeEnabled();
   await page.getByLabel('Team message').fill('Reviewed: enable traction without reducing the test difficulty.');
   await page.getByRole('button', { name: 'Send message' }).click();
   await page.getByRole('button', { name: 'Approve fix' }).scrollIntoViewIfNeeded();
-  await caption('6 / Approve · Morgan reviews the evidence and approves Alex’s proposal');
+  await caption('6 / Approve · abc reviews the evidence and approves xvz’s proposal');
   await pause(4000);
   await page.getByRole('button', { name: 'Approve fix' }).click();
-  await expect(page.getByText('Reviewed by Morgan · Reviewer')).toBeVisible();
+  await expect(page.getByText('Reviewed by abc (reviewer)')).toBeVisible();
   await pause(4000);
 
   await page.evaluate(({ id, token }) => sessionStorage.setItem('room-token:' + id, token), { id: roomId, token: authorToken });
   await page.goto(roomUrl);
   await page.getByRole('button', { name: 'Compare recorded result' }).scrollIntoViewIfNeeded();
-  await caption('7 / Compare · Back as Alex, inspect the result after independent approval');
+  await caption('7 / Compare · Back as xvz, inspect the result after independent approval');
   await pause(3000);
   await page.getByRole('button', { name: 'Compare recorded result' }).click();
   await expect(page.getByRole('heading', { name: 'Recovery demonstrated' })).toBeVisible();
